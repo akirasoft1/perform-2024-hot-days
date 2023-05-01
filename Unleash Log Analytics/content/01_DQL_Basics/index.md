@@ -2,7 +2,7 @@
 
 ### Step 1
 
-Login to the provided Dynatrace Tenant. Using the left-hand navigation panel, expand 'Observe & Explore' and select 'Logs'.
+In order to access logs on GRAIL, from the main menu in your environmnet, expand 'Observe & Explore' and select 'Logs'.
 
 ![Logs & Events Viewer](../../assets/images/Log_viewer.png)
 
