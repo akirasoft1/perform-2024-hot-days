@@ -1,6 +1,6 @@
-# Perform 2023 HOT Day Material
+# Perform 2024 HOT Day Material
 
-This repository will be used for Dynatrace Perform 2023 HOT (Hands-On-Training) Days.
+This repository will be used for Dynatrace Perform 2024 HOT (Hands-On-Training) Days.
 
 **Private during content creation**
 During creation of the content this repository will be private to Dynatrace employees. 
