@@ -6,7 +6,7 @@ In the yaml file, the screens section defines the different unified analysis pag
 
 ### Extending built-in unified analysis pages 
 
-Because we are designing this prometheus extension to run locally, the metrics that are ingested by the extension are will already be enriched with the host dimensions from which this OneAgent is running on. We only need then to define the cards to be injected in order to see these new metrics show up on the Host screen. More details are available [here](https://www.dynatrace.com/support/help/shortlink/extend-ua-pages)
+Because we are designing this prometheus extension to run locally, the metrics that are ingested by the extension are will already be enriched with the host dimensions from which this OneAgent is running on. We only need then to define the cards to be injected in order to see these new metrics show up on the Host screen. More details are available [here](https://www.dynatrace.com/support/help/shortlink/extend-ua-pages).
 
 Since we'd like these metrics to be on the details page, we are going to define a `detailsInjection` section. 
 
