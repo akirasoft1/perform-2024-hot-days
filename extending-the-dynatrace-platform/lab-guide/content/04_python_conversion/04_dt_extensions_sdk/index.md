@@ -33,5 +33,6 @@ You can now open this folder in the code editor of your choice and continue work
 6. Choose "Python Extensions 2.0".
 7. Name your extension.
 8. Examine the created scaffolding.
+9. Type "Dynatrace" in the Command Palette to familiarize yourself with the commands that are available to use in the extension. 
 
 ![](../../../assets/images/04_python_04_scaffolding.png)
