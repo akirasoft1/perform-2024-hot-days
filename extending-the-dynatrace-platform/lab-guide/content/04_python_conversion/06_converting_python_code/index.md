@@ -108,6 +108,21 @@ The logic of our extension exists with this "endpoint" loop.
 2. Collect the metrics exactly as in v1.
 3. During development, log the collected metric data.
 
+From `perform_plugin.py`:
+
+```python
+    def query(self, **kwargs):
+        
+        logger.info("Starting PerformHostPerformancePlugin")
+
+        # Collect the metrics
+        total, used, free = shutil.disk_usage(__file__)
+        cpu: float = psutil.cpu_percent(percpu=False)
+        ram: float = psutil.virtual_memory().percent
+```
+
+In `__main__.py`:
+
 ```python
         for endpoint in self.activation_config["endpoints"]:
             self.logger.info(f"Endpoint: {endpoint}")
