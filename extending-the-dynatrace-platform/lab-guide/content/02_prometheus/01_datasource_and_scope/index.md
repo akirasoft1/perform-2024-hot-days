@@ -2,6 +2,8 @@
 
 In this example we are collecting data from a Windows exporter which is currently running on your Windows environment.
 
+You can verify this is available locally on you lab host by accessing: `http://localhost:9182/metrics`
+
 ![Windows exporter](../../../assets/images/03_prometheus_windows_exporter.png)
 
 ### Scope
