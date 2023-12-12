@@ -126,7 +126,7 @@ const columns: TableColumn[] = [
     header: "Balance [€]",
     id: "balanceEur",
     columnType: "number",
-    accessor: (row) => row.balanceUsd * exchangeRates.data.EUR_USD,
+    accessor: (row) => row.balanceUsd / exchangeRates.data.EUR_USD,
   },
 ];
 ```

@@ -74,10 +74,10 @@ return (
 
 #### 📄 Your Task
 
-In the `app/components/AccountDetails.tsx` file, find the comment `// Exercise 3.1 Convert account details to timeseries`. We've already prepared for you a function which takes as input the data from a DQL query result, and converts it into two timeseries - one for the number of trades, the other for the balance.
+In the `app/components/AccountDetails.tsx` file, find the comment `// Exercise 2.1 Convert account details to timeseries`. We've already prepared for you a function which takes as input the data from a DQL query result, and converts it into two timeseries - one for the number of trades, the other for the balance.
 
 1. Below the comment, make a call to the `convertAccountTimeseries` function (already imported), passing in `accountDetails.data` as input. The result has two attributes: `balanceTimeseries` and `tradesTimeseries`. Extract these from the function return using the expression `const {balanceTimeseries, tradesTimeseries}`.
-2. In the `return` statement (at the end of the file), replace the comment `{/* Exercise 3.1. Visualize timeseries data */}` with a `<TimeseriesChart>` component.
+2. In the `return` statement (at the end of the file), replace the comment `{/* Exercise 2.1. Visualize timeseries data */}` with a `<TimeseriesChart>` component.
 3. Add a line visualization to the Timeseries Chart, where the data is the `balanceTimeseries` from step 1.
 4. Add a bar visualization to the Timeseries Chart, where the data is the `tradesTimeseries` from step 1.
 5. Check that your table can expand rows and shows a chart with two series.
