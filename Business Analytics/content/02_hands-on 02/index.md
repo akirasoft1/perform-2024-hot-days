@@ -26,6 +26,7 @@
     application/cloudevent-batch+json
     ```
 1. Run the command `$ ./post-bizevent.sh payload-cloudevent-batch.json`
+1. You will see a line that says "undefined"
 
 ### 4) View the events in the instructor's tenant
 
