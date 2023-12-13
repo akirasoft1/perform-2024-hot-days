@@ -1,5 +1,11 @@
 ## Hands-on 2 (Brian Chandler)
 
+Required setup command
+
+```
+source /home/dtu_training/supporting-files/export-env-vars.sh; echo $CLIENT_ID; echo $CLIENT_SECRET; echo $TENANT; echo $SSO_URL; cd /home/dtu_training/supporting-files
+```
+
 ### 1) JSON event
 1. Run the command `$ ./get-token.sh`
 1. Edit the file post-bizevent.sh to adjust the content-type
