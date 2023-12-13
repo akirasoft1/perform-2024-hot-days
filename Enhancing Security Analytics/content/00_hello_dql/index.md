@@ -6,14 +6,15 @@ You can find the details about the environment in Dynatrace University on the En
 
 ![Environment](../../assets/images/0-1-environment.png)
 
-Below that, you will the details to the Ace-Box which hosts the demo application that is used during the lab. We will only use the SSH access to retreive the URL of the unguard demo app and you can do this directly from you browser by clicking on the *Open Terminal* button. This open a terminal window in your browser and show the link to unguar 
-![ace-box](../../assets/images/0-2-demo-environment.png)
-
 ### Unguard
 
-The Ace-Box contains an application called unguard, it is an insecure cloud native microservices demo application. The application is a simple twitter clone, which allows to post messages, images and URLs. 
+We will us an application called unguard for this lab, it is an insecure cloud native microservices demo application. The application is a simple twitter clone, which allows to post messages, images and URLs. 
+
+You can access it using the following URL: http://unguard-lb-tsv10597-1232203251.us-west-2.elb.amazonaws.com/ui
 
 ![unguard](../../assets/images/0-3-unguard.png)
+
+##### Notebook Template for tasks: https://tsv10597.sprint.apps.dynatracelabs.com/ui/document/v0/#share=98235fdb-4a78-484e-8c2e-155f93714346
 
 > #### Task 1: Create a new user
 > - Open the unguard app from the Ace-Box as described above
@@ -33,3 +34,4 @@ The Ace-Box contains an application called unguard, it is an insecure cloud nati
 > - What was the name of the process that logged this information? On which host is it running?
 > - Can you find a list of all users that registered?
 >   -  There might a lot of entries from Robots, can you filter them out?
+> - Count the number of users that registered
