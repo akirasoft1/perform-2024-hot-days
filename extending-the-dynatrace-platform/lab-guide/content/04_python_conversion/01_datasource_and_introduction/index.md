@@ -14,7 +14,7 @@ This task requires three main steps:
 
 ### Where is extension data presented in the UI?
 
-In version 1, the UI presented extension data either in the infographic of the host or process that the extension was attached to or as a Custom Device in Technologies and Processes screen. Metric data could be explored in the Data Explorer or presented on a dashboard.
+In version 1, the UI presented extension data either in the infographic of the host or process that the extension was attached to or as a Custom Device in the Technologies and Processes screen. Metric data could be explored in the Data Explorer, presented on a dashboard and alerted on using Metric Events. 
 
 ![](../../../assets/images/04_python_01_overview.png)
 
