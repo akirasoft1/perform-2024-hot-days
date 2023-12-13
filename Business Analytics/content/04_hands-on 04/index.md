@@ -18,9 +18,9 @@
 1. Select "Execute DQL Query" from the right-hand menu and enter in the query in the "DQL query" box that appears.
     ```
     fetch bizevents, from:now()-1h
-    | filter Type == "CARD_ERROR"
-    | parse Details, "JSON:errors"
-    | fields `Order ID`, {errors[errorCode], alias:`Error code`}, {errors[errorType], alias:`Error type`}, {errors[errorMessage], alias:`Error message`}
+    | filter type == "CARD_ERROR"
+    | parse details, "JSON:errors"
+    | fields orderId, {errors[errorCode], alias:`Error code`}, {errors[errorType], alias:`Error type`}, {errors[errorMessage], alias:`Error message`}
     ```
 
 #### Adding a Code step to format the results
@@ -41,7 +41,7 @@
     
     //Loop through the orders and format nicely to send to Slack
     var niceOutput = ":warning: Orders failing to update credit card: \n";
-    orders.forEach((order) =>  niceOutput = niceOutput + "\n" + ":credit_card: [*Order ID*]: " + order['Order ID'] + ", :1234: [*Error code*]: " + order['Error code'] + ", :hourglass_flowing_sand: [*Error type*]: " + order['Error type'] + ", :email: [*Error message*]: " + order['Error message'] + "\n");
+    orders.forEach((order) =>  niceOutput = niceOutput + "\n" + ":credit_card: [*Order ID*]: " + order['orderId'] + ", :1234: [*Error code*]: " + order['Error code'] + ", :hourglass_flowing_sand: [*Error type*]: " + order['Error type'] + ", :email: [*Error message*]: " + order['Error message'] + "\n");
     
     return { niceOutput };
     }
@@ -56,7 +56,7 @@
 1. Choose "business-analytics-automation" as the channel (it should be the only option).
 1. In the "Message" field, enter the below.
     ```
-    {{ result('<name of previuous step>') }}
+    {{ result('<name of previuous step>.niceOutput') }}
     ```
 1. Make sure to replace "\<name of previous step\>" with the name of the Code step - which by default is "run_javascript_1".
 
