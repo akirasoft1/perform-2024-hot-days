@@ -1,4 +1,10 @@
-## Hands-on 2 (Brian Chandler)
+![image](https://github.com/dtu-engineering/perform-2024-hot-days/assets/836297/ab9a80ab-2284-4cb1-b7ff-51bd17030259)## Hands-on 2 (Brian Chandler)
+
+Required setup command
+
+```
+source /home/dtu_training/supporting-files/export-env-vars.sh; echo $CLIENT_ID; echo $CLIENT_SECRET; echo $ACCOUNT_URN; echo $TENANT; echo $SSO_URL; cd /home/dtu_training/supporting-files
+```
 
 ### 1) JSON event
 1. Run the command `$ ./get-token.sh`
