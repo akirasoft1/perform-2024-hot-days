@@ -33,18 +33,6 @@
 1. For "Path", copy and paste "price"
 1. At the bottom of the screen, click "Save changes"
 
-### RUM event ingestion
-
-#### Send
-1. Open the URL of your easyTrade application
-1. You don't need to log in
-1. Open the developer console in your browser
-1. copy and paste    
-    ```
-    dynatrace.sendBizEvent("type-RUM", {"custom-attribute": 99})
-    ```
-1. You will see a line that says "undefined"
-
 ### Validate with Notebook
 
 1. Open "Notebooks"
@@ -57,15 +45,6 @@
 fetch bizevents
 | filter event.type=="asset-purchase"
 ```
-
-1. Click on the "+" to add a new section
-1. Click on "Query Grail"
-1. Copy and paste the query
-```
-fetch bizevents
-| filter event.type=="type-RUM"
-```
-
 ### Processing rule
 
 1. Open "Settings"
