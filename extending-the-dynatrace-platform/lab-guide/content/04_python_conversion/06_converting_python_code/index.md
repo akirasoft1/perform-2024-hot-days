@@ -136,3 +136,35 @@ In `__main__.py`:
             self.logger.debug("Testing Metric Collection")
             self.logger.debug(f"Free -> {free} bytes, CPU -> {cpu:2.2f}%, RAM -> {ram:2.2f}%")
 ```
+#### Report the metrics
+
+In version 1, we used a very basic custom scheduler to enforce the user defined reporting interval. Version 2 add a much more robust method for handling scheduling, we will return to this later. For now we will report metrics according to the `query` methods fixed 1 minute interval.
+
+From `perform_plugin.py`:
+
+```python
+    self.results_builder.absolute(key='disk.used', value=used)
+    self.results_builder.absolute(key='disk.free', value=free)
+    self.results_builder.absolute(key='disk.total', value=total)
+    self.results_builder.absolute(key='cpu.usage', value=cpu)
+    self.results_builder.absolute(key='memory.usage', value=ram)
+```
+
+Instead of the `results_builder`, version 2 uses `self.report_metric()`. If your VS Code environment is correctly configured, you should see tool tips that will explain this (and all other SDK methods).
+
+![](../../../assets/images/04_python_05_tooltip.png)
+
+To convert between the two methods, simply transfer the metric keys (add the `METRIC_PREFIX` from above) and values to `report_metric`. The example also includes a test dimension to show how adding dimension data works. 
+
+In `__main__.py`:
+
+```python
+    # Report metrics with
+    self.report_metric(key=f"{METRIC_PREFIX}.disk.total", value=total, dimensions={"my_dimension": "dimension1"})
+    self.report_metric(key=f"{METRIC_PREFIX}.disk.used", value=used, dimensions={"my_dimension": "dimension1"})
+    self.report_metric(key=f"{METRIC_PREFIX}.disk.free", value=free, dimensions={"my_dimension": "dimension1"})
+    self.report_metric(key=f"{METRIC_PREFIX}.cpu.usage", value=cpu, dimensions={"my_dimension": "dimension1"})
+    self.report_metric(key=f"{METRIC_PREFIX}.memory.usage", value=ram, dimensions={"my_dimension": "dimension1"})
+```
+
+#### 
