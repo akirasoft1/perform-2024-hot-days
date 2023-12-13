@@ -26,5 +26,5 @@ Using metrics provided by the extension, Dashboards can be created and bundled w
 
 ![](../../../assets/images/04_python_01_dashboard.png)
 
-As always, metrics are available in the Data Explorer and the as the basis for alerting via Metric Events.
+As always, metrics are available in the Data Explorer and ready to be used as the basis for alerting via Metric Events.
 
