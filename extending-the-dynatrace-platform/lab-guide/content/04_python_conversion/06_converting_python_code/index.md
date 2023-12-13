@@ -1,6 +1,6 @@
 ## Converting the Python Code
 
-For many relatively simple extension, converting your Python code to v2, should be quite straightforward. Most key methods from the SDKs function similarly.
+For many simple extensions, converting your Python code to v2 should be quite straightforward. Most key methods from the SDKs function similarly.
 
 From the earlier section that [highlighted key differences between EF1 and EF2](../02_ef1_to_ef2_comparision/index.md), we see that: 
 
@@ -102,7 +102,7 @@ In `__main__.py`:
 
 Monitoring configurations in version 2 extension can use multiple "endpoints". The scaffolding code iterates through each of the defined endpoints and executes the extension code according to the parameters defined by each endpoint.
 
-The logic of our extension exists with this "endpoint" loop.
+The logic of our extension exists within this "endpoint" loop.
 
 1. During development, log the endpoint configuration.
 2. Collect the metrics exactly as in v1.
