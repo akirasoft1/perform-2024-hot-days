@@ -167,4 +167,59 @@ In `__main__.py`:
     self.report_metric(key=f"{METRIC_PREFIX}.memory.usage", value=ram, dimensions={"my_dimension": "dimension1"})
 ```
 
-#### 
+#### Report the Event
+
+Event reporting uses the new `self.report_dt_event` method. Just like when we converted metrics, the conversion to event reporting is straight forward. The event we are sending simulates a resource event by pushing a new event every five minutes. For this exercise, we will continue to simulate the resource event.
+
+Once again, the method tool-tip provides excellent inline documentation.
+
+![](../../../assets/images/04_python_05_report_event.png)
+
+From `perform_plugin.py`:
+
+```python
+        # Push an event every five minutes
+        if (datetime.now() - self.last_event) > timedelta(minutes=5):
+            logger.info("Reporting a custom event")
+            self.results_builder.report_resource_contention_event(
+                title="Host Performance Resource Event (v1)",
+                description="Host Performance Resource Event (v1)",
+                properties= {
+                    "free": str(free),
+                    "cpu": str(cpu),
+                    "ram": str(ram),
+                }
+            )
+            self.last_event = datetime.now()
+
+```
+
+The `report_event` documentation tells us that `event_type` take an object of type `DtEventType`. We can import this type into our project to give us access to it. In `__main__.py` update the "from dynatrace_extension ..." import to include `DtEventType`.
+
+In `__main__.py`:
+
+```python
+from dynatrace_extension import Extension, Status, StatusValue, DtEventType
+```
+
+Add the resource event using the same format as the v1 extension but substituting from `self.results_builder.report_resource_contention_event` to `self.report_event`. 
+
+In `__main__.py`:
+
+```python
+            # Report a resource event
+            if (datetime.now() - self.last_event) > timedelta(minutes=5):
+                self.logger.info("Reporting a resource contention event (v2)")
+                self.report_dt_event(
+                    event_type=DtEventType.RESOURCE_CONTENTION_EVENT,
+                    title="Reporting a resource contention event (v2)",
+                    properties= {
+                        "free": str(free),
+                        "cpu": str(cpu),
+                        "ram": str(ram),
+                    },
+                )
+                self.last_event: datetime = datetime.now()
+```
+
+Congratulations, you have converted your Python code!
