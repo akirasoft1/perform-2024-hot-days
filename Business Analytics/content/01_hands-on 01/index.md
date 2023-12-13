@@ -73,7 +73,10 @@ fetch bizevents
 1. Click on Processing
 1. Click on "Add rule"
 1. For "Rule name", copy and paste "Calculate revenue"
-1. For "Matcher (DQL)", copy and paste `event.type=="asset-purchase"`
+1. For "Matcher (DQL)", copy and paste 
+```
+event.type=="asset-purchase"
+``` 
 
 #### Fields
 1. Under "Transformation fields", click on "Add item"
@@ -88,7 +91,10 @@ fetch bizevents
 1. Leave toggles unchanged
 
 #### Processor definition
-1. For "Processor definition", copy and paste `FIELDS_ADD(trading_volume:price*amount)`
+1. For "Processor definition", copy and paste 
+```
+FIELDS_ADD(trading_volume:price*amount)
+```
 
 ### Bucket assignment rule
 1. Open "Settings"
@@ -97,7 +103,10 @@ fetch bizevents
 1. Click on "Add rule"
 1. For "Rule name", copy and paste "Asset Purchase"
 1. For "Bucket", select "Business events (35 days) (default_bizevents)"
-1. For "Matcher (DQL)", copy and paste `event.type=="asset-purchase"`
+1. For "Matcher (DQL)", copy and paste 
+```
+event.type=="asset-purchase"
+```
 
 
 ### Metric extraction rule
@@ -106,7 +115,10 @@ fetch bizevents
 1. Click on "Metric extraction"
 1. Click on "Add business event metric"
 1. For "Key", copy and paste "bizevents.easytrade.trading_volume"
-1. For "Matcher (DQL)", copy and paste `event.type=="asset-purchase"`
+1. For "Matcher (DQL)", copy and paste 
+```
+event.type=="asset-purchase"
+```
 1. For "Measure", select "Attribute value"
 1. For "Attribute", copy and paste "trading_volume"
 
