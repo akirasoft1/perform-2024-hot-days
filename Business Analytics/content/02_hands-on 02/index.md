@@ -1,4 +1,4 @@
-![image](https://github.com/dtu-engineering/perform-2024-hot-days/assets/836297/ab9a80ab-2284-4cb1-b7ff-51bd17030259)## Hands-on 2 (Brian Chandler)
+## Hands-on 2 (Brian Chandler)
 
 Required setup command
 
