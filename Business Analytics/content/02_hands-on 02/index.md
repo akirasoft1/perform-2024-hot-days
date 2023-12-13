@@ -28,3 +28,13 @@
 1. Run the command `$ ./post-bizevent.sh payload-cloudevent-batch.json`
 
 ### 4) View the events in the instructor's tenant
+
+### 5) RUM API event
+1. Navigate to http://easytrade.dtulab673309665.dynatrace.training/#/login
+1. In your browser, open developer tools and navigate to the console
+1. Run the command:
+    ```
+    dynatrace.sendBizEvent("type-RUM", {"custom-attribute": <YOUR_NAME>})
+    ```
+
+### 6) View the events in the instructor's tenant
