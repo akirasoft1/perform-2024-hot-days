@@ -32,22 +32,27 @@
 
     export default async function ({ execution_id }) {
 
+    //Enter your details here!
+    //------------------------
+    const yourName = "Test user";
+    const dqlStepName = "execute_dql_query_1";
+
     //Get the result of the previous step running DQL
-    const r = await fetch(`/platform/automation/v1/executions/${execution_id}/tasks/<name of step>/result`);
+    const r = await fetch(`/platform/automation/v1/executions/${execution_id}/tasks/${dqlStepName}/result`);
     //Get the content being returned in a variable called "body"
     const body = await r.json();
     //Extract the list of orders affected by errors - "records" is the name of the list of results returned
     const orders = body["records"];
     
     //Loop through the orders and format nicely to send to Slack
-    var niceOutput = ":warning: Orders failing to update credit card: \n";
+    var niceOutput = ":warning: [" + yourName + "] Orders failing to update credit card: \n";
     orders.forEach((order) =>  niceOutput = niceOutput + "\n" + ":credit_card: [*Order ID*]: " + order['orderId'] + ", :1234: [*Error code*]: " + order['Error code'] + ", :hourglass_flowing_sand: [*Error type*]: " + order['Error type'] + ", :email: [*Error message*]: " + order['Error message'] + "\n");
     
     return { niceOutput };
     }
     ```
-1. Make sure to replace the "\<name of step\>" with the name of the "Execute DQL query" step - which by default is "execute_dql_query_1".
-1. To make your results easier to see - alter the initial message starting "Orders failing to update credit card" with your name!
+1. Make sure to update the "yourName" and "dqlStepName" with the details you have used.
+1. "yourName" will add an identifier into your Slack message so we can confirm it has worked! "dqlStepName" is the name given to the previous DQL step, which by default is "execute_dql_query_1".
 
 #### Adding a step to send the results to Slack
 1. On the main canvas, hit the "+" icon underneath the Code step you have just created.
