@@ -1,3 +1,0 @@
-## Ownership
-
-Coming Soon.

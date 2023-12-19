@@ -6,4 +6,5 @@
     * Graph the max cpu usage for each host over the last 2 hours in 30 minute intervals
 
 *Hint: use the timeseries command*
+
 *Hint: use the metrics on Grail [documentation](https://docs.dynatrace.com/docs/shortlink/built-in-metrics-on-grail) to find the metric keys*
