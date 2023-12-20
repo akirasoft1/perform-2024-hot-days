@@ -16,7 +16,7 @@ To configure a connection to your VM, follow these steps:
 3. Add your VM's details. For example:
 
 ```text
-Host Perform
+Host Perform24
    HostName 10.0.0.1
    User dynatrace
    PasswordAuthentication yes
@@ -45,11 +45,9 @@ Search for these in the editor's Extensions menu and make sure the button says "
 
 ![install in ssh](../../assets/images/02_install_in_ssh.png)
 
-### 4. Point the app to your environment
+### 4. Run the app
 
-Modify the file at `~/easytrade-analytics/app.config.ts`, and change the `environmentUrl` based on your URL.
-
-### 5. Run the app
+First, edit the `~/easytrade-analytics/app.config.ts` file, and change the `environmentUrl` based on your environment's URL.
 
 Your editor should have already opened a terminal window for you. If not, please open one from the **top Menu > Terminal > New terminal**.
 
