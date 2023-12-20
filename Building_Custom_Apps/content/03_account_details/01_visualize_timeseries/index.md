@@ -6,7 +6,7 @@ Now that the overview page is complete, it's time to work on a new component so 
 
 #### 📖 Reminder
 
-Expandable rows are enabled by adding the `<DataTable.ExpandableRow />` component as a child to the `<DataTable />`. `ExpandableRow` must have a child which is a function taking the row data as input and returning the component that should be rendered in the expanded section. 
+Expandable rows are enabled by adding the `<DataTable.ExpandableRow />` component as a child to the `<DataTable />`. The `ExpandableRow` must have a child which is a function taking the row data as input and returning the component that should be rendered in the expanded section. 
 
 For example:
 
@@ -74,10 +74,10 @@ return (
 
 #### 📄 Your Task
 
-In the `app/components/AccountDetails.tsx` file, find the comment `// Exercise 2.1 Convert account details to timeseries`. We've already prepared for you a function which takes as input the data from a DQL query result, and converts it into two timeseries - one for the number of trades, the other for the balance.
+In the `app/components/AccountDetails.tsx` file, find the comment `// Exercise 3.1 Convert account details to timeseries`. We've already prepared for you a function which takes as input the data from a DQL query result, and converts it into two timeseries - one for the number of trades, the other for the balance.
 
 1. Below the comment, make a call to the `convertAccountTimeseries` function (already imported), passing in `accountDetails.data` as input. The result has two attributes: `balanceTimeseries` and `tradesTimeseries`. Extract these from the function return using the expression `const {balanceTimeseries, tradesTimeseries}`.
-2. In the `return` statement (at the end of the file), replace the comment `{/* Exercise 2.1. Visualize timeseries data */}` with a `<TimeseriesChart>` component.
+2. In the `return` statement (at the end of the file), add a new line after the comment `{/* Exercise 3.1. Visualize timeseries data */}` and then add a `<TimeseriesChart>` component.
 3. Add a line visualization to the Timeseries Chart, where the data is the `balanceTimeseries` from step 1.
 4. Add a bar visualization to the Timeseries Chart, where the data is the `tradesTimeseries` from step 1.
 5. Check that your table can expand rows and shows a chart with two series.
@@ -88,17 +88,17 @@ In the `app/components/AccountDetails.tsx` file, find the comment `// Exercise 2
   </summary>
 
 ```JSX
-// Exercise 2.1. Convert account details to timeseries
+// Exercise 3.1. Convert account details to timeseries
 const { balanceTimeseries, tradesTimeseries } = convertAccountTimeseries(accountDetails.data);
 
 return (
   <Flex flexDirection="column">
-    {/* Exercise 2.1. Visualize timeseries data */}
+    {/* Exercise 3.1. Visualize timeseries data */}
     <TimeseriesChart>
       <TimeseriesChart.Line data={balanceTimeseries} />
       <TimeseriesChart.Bar data={tradesTimeseries} />
     </TimeseriesChart>
-    {/* Exercise 2.2. Add intent button */}
+    {/* Exercise 5.1. Add intent button */}
   </Flex>
 );
 ```
@@ -136,7 +136,7 @@ In the `app/components/AccountDetails.tsx` file, make the following changes to t
   </summary>
 
 ```JSX
-{/* Exercise 2.1. Visualize timeseries data */}
+{/* Exercise 3.1. Visualize timeseries data */}
 <TimeseriesChart>
   <TimeseriesChart.YAxis label="Account balance" position="left" />
   <TimeseriesChart.YAxis label="Trades" position="right" />
@@ -151,4 +151,4 @@ In the `app/components/AccountDetails.tsx` file, make the following changes to t
 
 You have completed this section when your table can expand its rows, displaying a timeseries chart with 2 series (line & bars):
 
-![row_chart](../../assets/images/21_timeseries_chart.png)
+![row_chart](../../assets/images/31_timeseries_chart.png)

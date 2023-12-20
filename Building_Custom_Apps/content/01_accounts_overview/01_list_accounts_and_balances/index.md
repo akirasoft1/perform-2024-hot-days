@@ -6,7 +6,7 @@ Your first task is to create a simple table which will list out all the user acc
 
 #### 📖 Reminder
 
-To run a DQL query you can use the `useDqlQuery` like so:
+To run a DQL query you can use the `useDqlQuery` hook like so:
 
 ```typescript
 const myQuery = useDqlQuery({ body: { query: "fetch logs" }})
@@ -25,7 +25,7 @@ In the `app/pages/AccountOverview.tsx` file, you will see (on line 7) a DQL quer
   </summary>
 
 ```typescript
-const accountQuery = useDql({ body: { query }});
+const accountQuery = useDqlQuery({ body: { query }});
 ```
 
 </details>
@@ -61,7 +61,7 @@ In the `app/pages/AccountOverview.tsx` file, within the `return` statement at th
   </summary>
 
 ```JSX
-<DataTable columns={columns} data={accounts.data?.records ?? []} />
+<DataTable columns={columns} data={accountQuery.data?.records ?? []} />
 ```
 
 </details>

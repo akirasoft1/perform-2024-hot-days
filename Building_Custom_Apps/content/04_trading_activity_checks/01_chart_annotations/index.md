@@ -1,6 +1,6 @@
 ## Highlight suspicious trading activity
 
-Now that we have an overview of accounts and the account details is showing us trading activity over time, we're going to annotate our charts by highlighting trading activity checks and their results.
+Now that we have an overview of accounts and the detailed view is showing us trading activity over time, we're going to annotate our charts by highlighting suspicious trading activity checks and their results. Our checks use a simple logic - they're triggered if more than 3 trades happened in half an hour, and if more than $500 were withdrawn it's considered suspicious.
 
 ### 📌 Chart annotations
 
@@ -40,7 +40,7 @@ React will let you create elements from a variable array using the `map` functio
 
 #### 📄 Your Task
 
-In the `app/components/AccountDetails.tsx` file, find the comment `// Exercise 3.1. Create markers`.
+In the `app/components/AccountDetails.tsx` file, find the comment `// Exercise 4.1. Create markers`.
 
 1. Just below this comment, make a call to the `createMarkers` function, passing as input `accountDetails.data` which is the result of our DQL query. Store the result in a constant called `markers`.
 
@@ -56,12 +56,12 @@ In the `app/components/AccountDetails.tsx` file, find the comment `// Exercise 3
   </summary>
 
 ```JSX
-// Exercise 3.1. Create markers
+// Exercise 4.1. Create markers
 const markers = createMarkers(accountDetails.data);
 
 return (
   <Flex flexDirection="column">
-    {/* Exercise 2.1. Visualize timeseries data */}
+    {/* Exercise 3.1. Visualize timeseries data */}
     <TimeseriesChart>
       <TimeseriesChart.YAxis label="Account balance" position="left" />
       <TimeseriesChart.YAxis label="Trades" position="right" />
@@ -80,8 +80,7 @@ return (
         </TimeseriesAnnotations.Track>
       </TimeseriesChart.Annotations>
     </TimeseriesChart>
-    {/* Exercise 2.2. Add intent button */}
-    <IntentButton payload={{ "dt.query": query }}>Analyze further</IntentButton>
+    {/* Exercise 5.1. Add intent button */}
   </Flex>
 );
 ```
@@ -92,4 +91,4 @@ return (
 
 You have completed this section when your table's expanded row section displays a track above the chart. The track should how green & amber markers, each giving more info on hover:
 
-![trading_checks](../../assets/images/31_trading_checks.png)
+![trading_checks](../../assets/images/41_trading_checks.png)

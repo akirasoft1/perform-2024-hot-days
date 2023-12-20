@@ -12,3 +12,4 @@ To connect to your VM, we recommend VS Code's [Remote SSH extension](https://mar
 
 You can install it directly from the editor by going to the Extensions menu, searching for "Remote SSH" and clicking the install button.
 
+![remote ssh](../../assets/images/02_remote_ssh.png)
