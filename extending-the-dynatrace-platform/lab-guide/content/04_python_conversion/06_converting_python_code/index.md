@@ -150,7 +150,7 @@ From `perform_plugin.py`:
     self.results_builder.absolute(key='memory.usage', value=ram)
 ```
 
-Instead of the `results_builder`, version 2 uses `self.report_metric()`. If your VS Code environment is correctly configured, you should see tool tips that will explain this (and all other SDK methods).
+Instead of the `results_builder`, version 2 uses `self.report_metric`. If your VS Code environment is correctly configured, you should see tool tips that will explain this (and all other SDK methods).
 
 ![](../../../assets/images/04_python_05_tooltip.png)
 

@@ -30,6 +30,6 @@ You are done!
 
 It will now take the cluster about five minutes to deploy your extension to the correct hosts and for the extension execution controller on that host to begin to run the extension. In five to ten minutes you will begin to see data coming through.
 
-Head to the Data Explorer and search for the metric names that you created.
+Head to the **Data Explorer** and search for the metric names that you created.
 
-If you successfully followed the lab to this point, you know have a working extension built using the version 2 extension framework. in the next sections, we will define a topology and a basic unified analysis screen and add a bundled dashboard.
+If you successfully followed the lab to this point, you know have a working extension built using the version 2 extension framework. In the next sections, we will define a topology and a basic unified analysis screen and add a bundled dashboard.

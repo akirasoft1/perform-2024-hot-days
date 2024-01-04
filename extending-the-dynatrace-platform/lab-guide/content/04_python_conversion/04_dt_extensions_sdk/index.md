@@ -36,3 +36,18 @@ You can now open this folder in the code editor of your choice and continue work
 9. Type "Dynatrace" in the Command Palette to familiarize yourself with the commands that are available to use in the extension. 
 
 ![](../../../assets/images/04_python_04_scaffolding.png)
+
+#### Modify the `extra-platform` setting
+
+When the extension is built, dependencies are collected and bundled automatically. Some Python libraries have platform specific build requirements. In most cases, the Extension will choose an appropriate distribution automatically but there are some libraries that use a non-standard naming format that make this impossible. The `psutil` library used by this extension uses non-standard naming of it's compiled distributions so we need to make a quick change to our build settings.
+
+1. Click on the **Extensions** icon in the Sidebar and search for "Dynatrace". 
+2. Click on the gear icon and "Extension Settings".
+3. Expand the menu, and click on "Python environment".
+4. In the "Python Extra Platform" settings, click "Add item" and type `win_amd64` (Make sure to click "OK" when finished). 
+
+![](../../../assets/images/04_python_08_extra_platform.png)
+
+This updates our build settings and provides us with a Windows-only build which is perfect for our use case.
+
+See the [psutil download page](https://pypi.org/project/psutil/#files) for details on available distributions.

@@ -13,7 +13,9 @@ screens:
 ```
 In this example, we set a condition that uses the relationship we defined earlier. The condition says, "inject a card called `host_injection_card` only if there is a related entity of type `python:perform_host_performance` that is running on this host".
 
-Next, we need to define the `host_injection_card` that we referenced above. This definition below defines each chart type, color and style to showcase the kinds of customization possible. It is possible to omit most of these customizations. 
+Next, we need to define the `host_injection_card` that we referenced above. This definition below defines each chart type, color and style to showcase the kinds of customization possible. It is possible to omit most of these customizations.
+
+A full copy of all files is available in the Resources folder.
 
 ```yaml
 screens:
@@ -73,5 +75,3 @@ screens:
                     themeColor: BLUE
 
 ```
-
-Full [extension.yaml](../../../../supporting-materials/python/v2/extension/extension.yaml).
