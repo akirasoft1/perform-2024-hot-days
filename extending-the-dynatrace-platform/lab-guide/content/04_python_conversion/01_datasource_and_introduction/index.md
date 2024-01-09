@@ -1,6 +1,6 @@
 ## Data source and scope
 
-In this example we are converting a 1.0 Python extension to the 2.0 framework.
+Python Extensions in Dynatrace allow developers to create flexible and powerful extensions that cover use cases that other data sources (WMI, SNMP, JM, etc.) cannot. In this lab, we will convert an extension from the Python EF1 to the new EF2 framework.
 
 ### Conversion Overview
 
@@ -10,7 +10,14 @@ This task requires three main steps:
 
 1. Converting the `plugin.json` file.
 2. Converting the Python code.
-3. Taking advantage of Extension 2.0 features.
+3. Taking advantage of EF2 features.
+
+At the end of this lab, we will have:
+
+1. Examined the changes required in the Python code.
+2. Used the VS Code extension to automate parts of the conversion.
+3. Defined a topology. 
+4. Produced a packaged and ready to distribute version of the extension.
 
 ### Where is extension data presented in the UI?
 
