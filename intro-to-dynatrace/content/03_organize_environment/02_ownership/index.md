@@ -1,3 +1,0 @@
-## Ownership
-
-Follow in presentation.
