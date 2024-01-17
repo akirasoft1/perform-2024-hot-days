@@ -80,8 +80,8 @@ In the `app/components/AccountDetails.tsx` file, modify the `<TimeseriesChart.An
 
 Your have completed this section when you can drill down by clicking your chart's annotations:
 
-![drill_down](../../assets/images/32_annotation_action.png)
+![drill_down](../../assets/images/52_annotation_action.png)
 
 Clicking the button should prompt you to open the query in the Notebooks app:
 
-![notebook](../../assets/images/32_trading_check_drilldown.png)
+![notebook](../../assets/images/52_trading_check_drilldown.png)

@@ -1,6 +1,6 @@
 ## Perform Host Performance Extension
 
-The Host Performance extension collects basic host metrics using the `shutil` library. The extension collection 5 basic metrics and reports a resource contention event. 
+The Host Performance extension collects basic host metrics using the `psutil` library. The extension collection 5 basic metrics and reports a resource contention event. 
 
 ![](../../../assets/images/04_python_03_code.png)
 
@@ -10,7 +10,7 @@ Configuration of the extension is limited to a single property. End users can se
 
 #### plugin.json
 
-Available to download [here](../../../../supporting-materials/python/v1/plugin.json)
+Also available in the Resources folder. 
 
 ```json
 {

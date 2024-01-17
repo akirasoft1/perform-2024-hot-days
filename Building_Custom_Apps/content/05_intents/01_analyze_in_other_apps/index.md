@@ -20,7 +20,7 @@ Many Dynatrace apps are suitable for analysing Grail query results. All of these
 
 #### 📄 Your Task
 
-In the `app/components/AccountDetails.tsx` file, find the comment `{/* Exercise 3.2. Add intent button */}`.
+In the `app/components/AccountDetails.tsx` file, find the comment `{/* Exercise 5.1. Add intent button */}`.
 
 1. Just under the comment add an `<IntentButton>` element.
 2. Set the `payload` property of the `IntentButton` to `{ "dt.query": query }` and label the button as `Analyze further`
@@ -40,8 +40,8 @@ In the `app/components/AccountDetails.tsx` file, find the comment `{/* Exercise 
 
 You have completed this section when the expanded row of your table displays a button labelled "Analyze further":
 
-![analyze_further](../../assets/images/22_intent_button.png)
+![analyze_further](../../assets/images/51_intent_button.png)
 
 When clicking the button, you should be presented with apps that can handle this intent:
 
-![apps](../../assets/images/22_apps_suggested.png)
+![apps](../../assets/images/51_apps_suggested.png)
