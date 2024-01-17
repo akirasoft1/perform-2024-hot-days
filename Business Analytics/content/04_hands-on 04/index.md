@@ -2,10 +2,26 @@
 
 ### Automating Business Analytics
 
+#### Before we start
+1. From the main Dynatrace UI - select "Hub" from the left-hand menu.
+1. Search for "Slack" and click on "Slack for Workflows."
+1. In the top-right of the window that appears, click "Install."
+1. Once that's finished, either click "Apps" in the left-hand menu or search for "Settings."
+1. Go to "Preferences" > "Limit outbound connections."
+1. Click "Add item" and enter "slack.com" > click "Save changes."
+1. Whilst still in the "Settings" app, go to "Dynatrace Apps" > "Slack Connections."
+1. Click "Add item," and enter the following details.
+   ```
+   Connection name: HOT day 2024
+   Bot token: xoxb-6050153798579-6035743974439-U9nUq1crfS5DKONk4KOQ9do6
+   ```
+1. Hit "Save changes" at the bottom.
+
 #### Creating a new Workflow
 1. From the main Dynatrace UI click the "search" icon in the top-left.
 1. Search for "Workflows" and click the Workflow app that appears in the search results.
 1. Click the "+ Workflow" icon that appears in the top-right when you're in the app.
+1. (Optional) In the top-right give your Workflow a nice name!
 
 #### Choosing a trigger
 1. When you open your new Workflow you'll be immediately presented with a list of triggers on the right-hand side.
@@ -25,6 +41,7 @@
 
 #### Adding a Code step to format the results
 1. On the main canvas, hit the "+" icon underneath the DQL step you have just created.
+1. Add a "Run JavaScript" step.
 1. Copy the code below into the "Source code" box on the right-hand side.
     ```
     // optional import of sdk modules
@@ -57,8 +74,8 @@
 #### Adding a step to send the results to Slack
 1. On the main canvas, hit the "+" icon underneath the Code step you have just created.
 1. Select the "Send message" tile under the "Slack for Workflows" section.
-1. In the options that appear on the right-hand side, select "HOT day 2023" under the "Connection."
-1. Choose "business-analytics-automation" as the channel (it should be the only option).
+1. In the options that appear on the right-hand side, select "HOT day 2024" under the "Connection."
+1. Choose "business-analytics-automation" as the channel.
 1. In the "Message" field, enter the below.
     ```
     {{ result('<name of previuous step>.niceOutput') }}
