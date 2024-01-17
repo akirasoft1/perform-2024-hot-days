@@ -6,7 +6,7 @@
 1. From the main Dynatrace UI click the "search" icon in the top-left.
 1. Search for "Workflows" and click the Workflow app that appears in the search results.
 1. Click the "+ Workflow" icon that appears in the top-right when you're in the app.
-1. (Optional) In the top-right give your Workflow a nice name!
+1. (Optional) In the top-left give your Workflow a nice name!
 
 #### Choosing a trigger
 1. When you open your new Workflow you'll be immediately presented with a list of triggers on the right-hand side.
@@ -62,7 +62,7 @@
 1. In the options that appear on the right-hand side, select "Create a new connection" which should open a new browser tab.
 1. Before you fill in the Slack connection, go to "Preferences" > "Limit outbound connections" in the menu to the left.
 1. Click "Add item" and enter "slack.com" > click "Save changes."
-1. Whilst still in the "Settings" app, go to "Dynatrace Apps" > "Slack Connections."
+1. Whilst still in the "Settings" app, go back to "Dynatrace Apps" > "Slack Connections."
 1. Click "Add item," and enter the following details.
    ```
    Connection name: HOT day 2024
