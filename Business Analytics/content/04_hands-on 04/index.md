@@ -73,7 +73,7 @@
 1. Select the "business-analytics-automation" channel.
 1. In the "Message" field, enter the below.
     ```
-    {{ result('<name of previuous step>.niceOutput') }}
+    {{ result('<name of previous step>.niceOutput') }}
     ```
 1. Make sure to replace "\<name of previous step\>" with the name of the Code step - which by default is "run_javascript_1".
 
