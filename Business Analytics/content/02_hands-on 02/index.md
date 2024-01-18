@@ -1,4 +1,4 @@
-## Hands-on 2 (Brian Chandler)
+## Hands-on 2 (Gabriel Prioli)
 
 Required setup command
 
