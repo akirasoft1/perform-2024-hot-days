@@ -1,6 +1,6 @@
 ## Highlight suspicious trading activity
 
-Now that we have an overview of accounts and the detailed view is showing us trading activity over time, we're going to annotate our charts by highlighting suspicious trading activity checks and their results. Our checks use a simple logic - they're triggered if more than 3 trades happened in half an hour, and if more than $500 were withdrawn it's considered suspicious.
+Now that we have an overview of accounts and a detailed view showing us trading activity over time, we're going to annotate our charts by highlighting suspicious trading activity checks and their results. Our checks use a simple logic - if more than 3 trades are triggered in a 30-minute period, and more than $500 is withdrawn it's considered suspicious.
 
 ### 📌 Chart annotations
 

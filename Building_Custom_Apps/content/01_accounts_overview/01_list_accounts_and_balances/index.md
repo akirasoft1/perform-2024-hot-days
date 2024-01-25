@@ -17,7 +17,7 @@ const myQuery = useDqlQuery({ body: { query: "fetch logs" }})
 In the `app/pages/AccountOverview.tsx` file, you will see (on line 7) a DQL query already prepared which will extract all user accounts alongside their ID, and balance.
 
 1. Find the line with the comment `// Exercise 1.1. Query account data` 
-2. Just below it, invoke the `useDqlQuery` hook, giving it as parameter the query we prepared for you. Store the result in a new `constant` called `accountQuery`.
+2. Just below it, invoke the `useDqlQuery` hook, giving it as parameter of the query we prepared for you. Store the result in a new `constant` called `accountQuery`.
 
 <details>
   <summary>
@@ -34,7 +34,7 @@ const accountQuery = useDqlQuery({ body: { query }});
 
 #### 📖 Reminder
 
-Strato's DataTable component is the easiest way to show data in table format. The component takes columns and data which can both be converted from a DQL query result:
+Strato's DataTable component is the easiest way to show data in a table format. The component takes columns and data which can both be converted from a DQL query result:
 
 ```JSX
 const myQuery = useDqlQuery(queryParams);
