@@ -2,8 +2,7 @@
 
 This section will guide you through the steps to setup your editor and access the Dynatrace app you'll be working on.
 
-On the Dynatrace University page, you will find the details of your VM and your Dynatrace environment.
-Going forward you will need the IP address, username, and password, as well as the URL to the environment.
+On the Dynatrace University page, you will find the details of your VM. Going forward you will need the IP address, username, and password.
 
 ### 1. Configure your connection
 
@@ -47,7 +46,7 @@ Search for these in the editor's Extensions menu and make sure the button says "
 
 ### 4. Run the app
 
-First, edit the `~/easytrade-analytics/app.config.ts` file, and change the `environmentUrl` based on your environment's URL.
+First, open the `app.config.ts` file, and change the `environmentUrl` to your Dynatrace tenant URL.
 
 Your editor should have already opened a terminal window for you. If not, please open one from the **top Menu > Terminal > New terminal**.
 

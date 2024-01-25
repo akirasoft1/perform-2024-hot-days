@@ -98,7 +98,7 @@ const calculatedColumn = {
 
 1. In the `app/pages/AccountOverview.tsx` file, find the comment `// Exercise 2.1. Get exchange rates`. Just below it, make a call to the `useExchangeRates` hook and store the result in a constant called `exchangeRates`.
 2. In the `columns` constant, find the comment `// Exercise 2.1 Add a column`, and add another entry to the list.
-3. Give this column an `id`, name it `Balance [€]`, set the column type to `number`, and give it a ratio width of 1. Calculate its value in the `accessor` by dividing the `balanceUsd` by the `EUR_USD` currency exchange rate (hint: this is in the `data` attribute of your hook).
+3. Give this column an `id`, set the header as `Balance [€]`, set the column type to `number`, and give it a ratio width of 1. Calculate its value in the `accessor` by dividing the `balanceUsd` by the `EUR_USD` currency exchange rate (hint: this is in the `data` attribute of your hook).
 
 <details>
   <summary>
@@ -127,6 +127,7 @@ const columns: TableColumn[] = [
     id: "balanceEur",
     columnType: "number",
     accessor: (row) => row.balanceUsd / exchangeRates.data.EUR_USD,
+    ratioWidth: 1,
   },
 ];
 ```

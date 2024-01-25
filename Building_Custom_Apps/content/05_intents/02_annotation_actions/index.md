@@ -53,7 +53,7 @@ In the `app/components/AccountDetails.tsx` file, modify the `<TimeseriesChart.An
     <ChartSeriesAction>
       <ChartSeriesAction.Item
         onSelect={() => {
-          sendIntent({ "dt.query": buildIntentQuery(account, annotation) }, "dynatrae.notebooks", "view-query");
+          sendIntent({ "dt.query": buildIntentQuery(account, annotation) }, "dynatrace.notebooks", "view-query");
         }}
       >
         Drilldown to Notebooks
