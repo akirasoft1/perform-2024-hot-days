@@ -56,10 +56,19 @@ windows_service_info{display_name="Delivery Optimization",name="dosvc",process_i
 windows_service_info{display_name="DevQuery Background Discovery Broker",name="devquerybroker",process_id="0",run_as="LocalSystem"} 1
 ```
 
+Start by adding a new subgroup named `running_services`. Either use the code lens or type/copy the following metrics section:
+
 ```yaml
-  - group: windows
-    subgroups:
-      # Additional subgroups defined
+      - subgroup: running_services
+        metrics:
+          - key: windows_service_info
+            value: metric:windows_service_info
+            type: gauge
+```
+
+The above would capture all services, so we need to add a dimension section where we can specify our filter. Note that the Prometheus code lens will also allow you to select labels that have been scraped. Either use this or manually type/copy the below dimensions section. Note that we're assigning a feature set to this subgroup so that it can be enabled/disabled at configuration time.
+
+```yaml
       - subgroup: running_services
         featureSet: Windows Running Service Info
         dimensions:
@@ -89,7 +98,7 @@ Similar to hard coded filters, variables can be added to the yaml file to make c
 
 ### Adding vars section
 
-In your yaml, similar to the `prometheus:` section, a `vars:` section can be added to define different types of variables. See [Extensions 2.0 Variables](https://www.dynatrace.com/support/help/shortlink/extension-yaml#variables) for more information on the different variable types. 
+In your yaml, similar to the `prometheus:` section, a `vars:` section can be added at the root/top level to define different types of variables. See [Extensions 2.0 Variables](https://www.dynatrace.com/support/help/shortlink/extension-yaml#variables) for more information on the different variable types. 
 
 ```yaml
 vars:
@@ -103,16 +112,53 @@ vars:
 Once defined, the variable can be used similar to the `const:` within a `filter:` statement (`filter: var:service_pid`)
 
 ```yaml
-prometheus:
-  - group: services
-    subgroups:
-      # Additional subgroups defined
       - subgroup: running_services
         featureSet: Windows Running Service Info
         dimensions:
           - key: process_id
             value: label:process_id
             filter: var:service_pid # converted this line from const to var
+          - key: display_name
+            value: label:display_name
+        metrics:
+          - key: windows_service_info
+            value: metric:windows_service_info
+            type: gauge
+```
+
+If you have followed all steps your extension should now look like this:
+
+```yaml
+name: custom:windows-prometheus
+version: "0.0.1"
+minDynatraceVersion: "1.282.0"
+author:
+  name: Alice Smith
+
+vars:
+  - id: service_pid
+    type: text
+    displayName: Service Process ID(s)
+    description: "Filter which PIDs should be captured"
+    required: false
+
+prometheus:
+  - group: windows
+    subgroups:
+      - subgroup: disk
+        metrics:
+          - key: windows_logical_disk_free_bytes
+            value: metric:windows_logical_disk_free_bytes
+            type: gauge
+          - key: windows_logical_disk_size_bytes
+            value: metric:windows_logical_disk_size_bytes
+            type: gauge
+      - subgroup: running_services
+        featureSet: Windows Running Service Info
+        dimensions:
+          - key: process_id
+            value: label:process_id
+            filter: var:service_pid
           - key: display_name
             value: label:display_name
         metrics:
