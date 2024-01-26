@@ -27,14 +27,14 @@ Add a new Prometheus endpoint and point it to `http://localhost:9182/metrics`. T
 
 Leaving a slash at the end will make the Prometheus data source try to collect data from a Prometheus API and not scraping a metrics endpoint
 
-Next, select which Feature sets you want to enable, then Activate
+Next, select which Feature sets you want to enable, and to see the service info enter a valid filter pattern. This could be for specific PIDs or just the following to ensure that only running services are reported: `$not($eq(0))`
 
 ![Feature sets](../../../assets/images/03_prometheus_featureset.png)
 
-We can see and verify data by going to **Data Explorer**, **Metrics**, or the **HOST** that the extension was deployed to in Dynatrace
+After activation it is not uncommon to first see an Error status reported while the extension/configuration get send to the configured host(s).
+
+We can see and verify data by going to **Data Explorer** or **Metrics** and searching for our metrics keys.
 
 ![Data explorer](../../../assets/images/03_prometheus_data_explorer.png)
-
-![Host Screen](../../../assets/images/03_prometheus_host_screen.png)
 
 We are done!

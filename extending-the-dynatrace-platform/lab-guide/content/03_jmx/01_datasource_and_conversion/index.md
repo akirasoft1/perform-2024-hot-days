@@ -8,13 +8,13 @@ In this example we are converting a 1.0 JMX extension for Kafka to the 2.0 frame
 
 Start by opening a new empty folder in VS code for the 2.0 Extension.
 
-Then use the 'Initialize workspace' command and select the latest schema version and to use existing certs. Using existing certs means we are re-using the certificates from the earlier labs and do not need to upload them to Dynatrace or distribute them to our hosts and ActiveGates.
+Then use the 'Initialize workspace' command and select schema version `1.282.0` and to use existing certs. Using existing certs means we are re-using the certificates from the earlier labs and do not need to upload them to Dynatrace or distribute them to our hosts and ActiveGates.
 
 When asked what type of project you are creating select "JMX 1.0 Conversion." It will ask if you have this extenion file locally or would like to retrieve it from your connected Dynatrace environment. The 1.0 extension you will use can be found [in the supporting materials under jmx\\1.0](../../../../supporting-materials/jmx/1.0/plugin.json). Use the local option and select the plugin.json file.
 
 ![Conversion](../../../assets/images/03_jmx_initialize_conversion_step.png)
 
-Finally, select "yes" when asked if you would like to show this JMX data on the Host details page.
+**Finally, be sure to select "yes" when asked if you would like to show this JMX data on the Host details page.**
 
 You should now see your `extension.yaml` filled with:
   - The JMX definition describing what attributes and properties to collect from which Mbeans
@@ -60,6 +60,10 @@ Each **subgroup** will be one JMX query. Multiple Mbeans can match and wildcards
 
 You can also define `dimensions` and `metrics` to collect from this query. These can use properties (`property:`) and attributes (`attribute:`). Properties are what you would see in the query.
 
-Take some time to look through the various other sections of the yaml file. The screens section in particular will make use of some advanced concepts to display data very similarly to how it was presented in 1.0 extensions.
+Take some time to look through the various other sections of the yaml file. The `screens`` section in particular will make use of some advanced concepts to display data very close to how it was presented in 1.0 extensions. To read more about the screens checkout the [Unified analysis](https://docs.dynatrace.com/docs/extend-dynatrace/extend-ui/unified-analysis) pages in the documentation.
 
 Finally, build, deploy, activate the extension in your environment and take a look at the collected data after a few minutes.
+
+You'll be able to see some of the metrics that we injected at the host level and for many metrics we'll need to view the process group instance entity. Navigate to the Kafka process view and click on the three dots (`...`) and select `Metrics and logs analysis` to view the Unified Analysis page where our data will be injected.
+
+![metrics_and_logs_jmx](../../../assets/images/03_jmx_ua_pgi.png)
