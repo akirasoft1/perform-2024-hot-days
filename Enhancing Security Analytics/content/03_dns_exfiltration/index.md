@@ -26,14 +26,16 @@ fetch `logs`, from ...
 ```
 
 ## Task 2: let's extract the clues
-Ok, good start point!
-Now we found DNS Client logs from the server but we have to got in depth looking for specific messages.
-You have to work in order to parse this specific log message structure:
+Ok, this is a good start point!
+Now we found DNS Client logs from the server but we have to got in depth, looking for specific messages.
+You have to work in order to parse the following specific log message structure (see the exeample here):
 
 ```
 DNS query is called for the name some_uppercase_letters_and_numbers-.sometext.sometext, type 1, query options 196616, Server List 172.16.122.4, isNetwork query 0, network index 0, interface index 0, is asynchronous query 0
 ```
-you also need to extract fields from this specific log message:
+
+Everytime that the exfiltration script starts to exfiltrate data, DNS queries are crafted in order to generate a query record for a fake A record. Windows will log these queries in the EventViewer like in the example above.
+You also need to extract fields from this specific log message:
 
 -> name requested as "dns_query"
 
@@ -43,7 +45,7 @@ you also need to extract fields from this specific log message:
 
 *Hint:*
 ```
-Open the "extract fields" on content fields and use DPL architect to parse the log message
+Open the "extract fields" on content fields and use DPL architect to parse the log message creating the variables with fieldsAdd command.
 ```
 
 ## Task 3: adjust the findings
