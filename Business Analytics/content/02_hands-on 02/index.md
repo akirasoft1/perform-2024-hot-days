@@ -21,8 +21,9 @@
 1. Copy the URL of your Dynatrace tenant and paste it on line 3
 1. Make the following modifications: remove the ".apps" and the leading "/"
 1. It has to look something like "https://<your id>.sprint.dynatracelabs.com"
-1. Type "CTRL + X", then "Y", then hit <Enter>.
+1. Type "CTRL + X", then "Y", then hit "Enter".
 1. Run the following command
+
     ```
     source /home/dtu_training/supporting-files/credentials.sh; echo $TENANT; echo $TOKEN
     ```
@@ -41,7 +42,10 @@
 1. Run the command `./cloudevent-batch.sh`
 
 For all the event types, run the followingquery:
+
 ```
+fetch bizevents
+| filter event.provider == "com.dynatrace.perform"
 ```
 
 ### 5) RUM API event
