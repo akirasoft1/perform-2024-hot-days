@@ -1,4 +1,4 @@
-## [Link to Lab Exercise 1 Notebook Template](https://vis62283.sprint.apps.dynatracelabs.com/ui/document/v0/#share=c6c2fee0-35d2-420b-b8c2-044720b11b23 "## Link to Lab Exercise 1 Notebook Template")
+## [Link to Lab Exercise 1 Notebook Template](https://sel18797.sprint.apps.dynatracelabs.com/ui/document/v0/#share=8cdc6403-8ec7-4f2b-96fd-9ed49c33f54c "## Link to Lab Exercise 1 Notebook Template")
 
 
 ## Query For Specific IOCs
@@ -9,16 +9,16 @@ They provided you with the following list of IP addresses:
 
 | Indicator | Type |  Date Added |
 |----------|:-------------:|------:|
-| 198.12.76.214 |  IPV4 | 2024-11-22 |
-| 5.149.248.68 |  IPV4 | 2024-11-22 |
-| 35.245.59.16 | IPV4 | 2024-11-22 |
-| 188.241.58.0/24|  CIDR | 2024-11-22 |
-| 104.211.177.0| IPV4 | 2024-12-02 |
+| 198.12.76.214 |  IPV4 | 2024-01-28 |
+| 5.149.248.68 |  IPV4 | 2024-01-28 |
+| 35.245.59.16 | IPV4 | 2024-01-28 |
+| 188.241.58.0/24|  CIDR | 2024-01-28 |
+| 104.211.177.0| IPV4 | 2024-01-28 |
 
 ### Task 1: find if any of those IP addresses accessed the environment
 
 1. Login to your given Dynatrace Lab Environment. Access Notebooks.
-2. You can access your notebook template for this lab exercise here: [[Lab 1] Template](https://vis62283.sprint.apps.dynatracelabs.com/ui/document/v0/#share=c6c2fee0-35d2-420b-b8c2-044720b11b23 "[Lab 1] Template")
+2. You can access your notebook template for this lab exercise here: [[Lab 1] Template](https://sel18797.sprint.apps.dynatracelabs.com/ui/document/v0/#share=8cdc6403-8ec7-4f2b-96fd-9ed49c33f54c "[Lab 1] Template")
 3. Click on the notebook template name -> Make a copy.
 4. Once the template is duplicated, rename the newly created notebook by navigating, Template Name -> Rename. Give a unique name for easy identification of your notebook.
 5. Good job. You now have your notebook ready to dive into the lab exercise.
