@@ -49,4 +49,8 @@ Note: If you need to re-run any steps, use f1 and search for the relevant step. 
 
 You are ready to write a new extension
 
+## Download supporting materials for labs
+
+Download the supporting materials from this [repository](https://github.com/tukanuk/supporting-materials). We'll be using them later in our labs.
+
 
