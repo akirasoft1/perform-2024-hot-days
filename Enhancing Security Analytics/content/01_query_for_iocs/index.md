@@ -1,4 +1,4 @@
-##[Link to Lab Exercise 1 Notebook Template](https://tsv10597.sprint.apps.dynatracelabs.com/ui/document/v0/#share=9040765b-8aa0-48d4-8153-b21cff6c6023 "## Link to Lab Exercise 1 Notebook Template")
+## [Link to Lab Exercise 1 Notebook Template](https://vis62283.sprint.apps.dynatracelabs.com/ui/document/v0/#share=c6c2fee0-35d2-420b-b8c2-044720b11b23 "## Link to Lab Exercise 1 Notebook Template")
 
 
 ## Query For Specific IOCs
@@ -17,10 +17,11 @@ They provided you with the following list of IP addresses:
 
 ### Task 1: find if any of those IP addresses accessed the environment
 
-1. Login to your given Dynatrace Lab Environment. Access Notebook.
-2. Download your notebook template here: [[Lab 1] Template](https://github.com/robinwyss/perform24-securityanalytics-labguide/blob/main/content/01_query_for_iocs/%5BLab%201%5D%20P24%20Template%20-%20Find%20the%20IOCs.json "[Lab 1] Template")
-3. Under Notebooks page, look for Upload button, use that to upload the downloaded template file for this exercise.
-4. Good job. You now have a template uploaded to start the lab exercise.
+1. Login to your given Dynatrace Lab Environment. Access Notebooks.
+2. You can access your notebook template for this lab exercise here: [[Lab 1] Template](https://vis62283.sprint.apps.dynatracelabs.com/ui/document/v0/#share=c6c2fee0-35d2-420b-b8c2-044720b11b23 "[Lab 1] Template")
+3. Click on the notebook template name -> Make a copy.
+4. Once the template is duplicated, rename the newly created notebook by navigating, Template Name -> Rename. Give a unique name for easy identification of your notebook.
+5. Good job. You now have your notebook ready to dive into the lab exercise.
 
 ------------
 
@@ -70,8 +71,10 @@ Hint: There are more than one way to search for Windows events.
 2. Some fields contain usernames, ip addresses, or any other useful information for this investigation you think.
 	1. Example: use the function 'fields' to display only the required fields, and hide rest of the fields. Syntax can be found on our documentation.
 
-#### 5. Hunt for any activity from the given known IOCs outside Windows.
+#### 5. Hunt for any activity from the given known IOCs in Windows.
 1. Now that the fields of interests are displayed, we can look for IOCs. We have received the list of IOCs. Let's run a match function or an operator function to see if we can find a match for any of the IPs. Tips and Hints for this step is given in next section below (Expand Scope of Threat Hunting)
+2. Use functions such as ipIn. Example: `ipIn(field-to-lookup, ip-to-lookup)`
+3. *Reference: https://docs.dynatrace.com/docs/platform/grail/dynatrace-query-language/functions/network-functions*
 	>Note: You may or may not find any results for the IP searches on windows. This is quite common in Security Analytics. This is a positive state. This means, the attackers have not managed to reach this point. So we go back one step to see if the attacker traces of the IPs are found in other security tools.
 
 ------------
