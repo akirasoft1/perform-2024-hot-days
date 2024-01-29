@@ -1,6 +1,3 @@
-
-| parse content, \"\"\"LD '\"' WORD:method\"\"\"",
-
 ## Userfule commands
 - filter: restricts the output by a certain condition. 
     - Example: filter the log content by the endpoint */login*
