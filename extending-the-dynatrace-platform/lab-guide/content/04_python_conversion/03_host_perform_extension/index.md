@@ -1,5 +1,7 @@
 ## Perform Host Performance Extension
 
+All supporting materials are available [here](https://github.com/tukanuk/supporting-materials/tree/main).
+
 The Host Performance extension collects basic host metrics using the `psutil` library. The extension collection 5 basic metrics and reports a resource contention event. 
 
 ![](../../../assets/images/04_python_03_code.png)
@@ -10,7 +12,8 @@ Configuration of the extension is limited to a single property. End users can se
 
 #### plugin.json
 
-Also available in the Resources folder. 
+Also available in the Resources folder.
+Download [here](https://github.com/tukanuk/supporting-materials/blob/main/python/v1/plugin.json)
 
 ```json
 {
@@ -198,7 +201,7 @@ Also available in the Resources folder.
 
 #### properties.json
 
-Available to download [here](../../../../supporting-materials/python/v1/properties.json)
+Available to download [here](https://github.com/tukanuk/supporting-materials/blob/main/python/v1/properties.json).
 
 ```json
 {
@@ -208,7 +211,7 @@ Available to download [here](../../../../supporting-materials/python/v1/properti
 
 #### perform_plugin.py
 
-Available to download [here](../../../../supporting-materials/python/v1/perform_plugin.py)
+Available to download [here](https://github.com/tukanuk/supporting-materials/blob/main/python/v1/perform_plugin.py)
 
 ```python
 """

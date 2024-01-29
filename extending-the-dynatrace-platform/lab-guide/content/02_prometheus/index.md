@@ -1,5 +1,7 @@
 ## Prometheus Extension
 
+All supporting materials are available [here](https://github.com/tukanuk/supporting-materials/tree/main).
+
 Prometheus is an open-source tool that collects and stores metrics from running jobs as time series data in a multi-dimensional data model.
 
 Dynatrace provides you with a framework that you can use to extend your application and services observability into data acquired directly from Prometheus. The Dynatrace extensions framework can pull Prometheus metrics from the `/metrics` endpoint by scraping, a Prometheus API endpoint, or a data exporter (Prometheus target).
