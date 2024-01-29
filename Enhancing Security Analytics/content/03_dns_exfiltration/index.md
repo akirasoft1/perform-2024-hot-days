@@ -10,9 +10,9 @@ The server has been configured to log DNS client activity, as per ACME enforceme
 A. Dynatrace Application Security is monitoring the application and you've been informed that CLV
 (code-level vulnerabilities) reports CMDi exposure on the WCLIENT host in the datacenter.
 
-B. The CMDi vulnerability may have been exploited to inject a Powershell script used to exfiltrate data.
+B. The CMDi vulnerability may has been exploited and used to inject a Powershell script: this is what is used to exfiltrate data.
 
-C. You suspect that a possible exfiltration may have happened up to 2 months ago. 
+C. You suspect that a possible exfiltration took place up to 2 months ago. 
 
 ## Task 1: use Notebook to explore 
 Open the Dynatrace instance and go to the App *Notebooks*.
@@ -21,20 +21,21 @@ Start from filtering up to 2 months ago, focusing on Windows DNS Client logs.
 
 *Hint:*
 ```
-fetch `logs`, from ...
-| filter log.source == "..."
+fetch `logs`
+| filter log.source == "Microsoft-Windows-DNS-Client/Operational"
+| parse content, <use DPL here to parse the log message and extract data>
 ```
 
 ## Task 2: let's extract the clues
 Ok, this is a good start point!
-Now we found DNS Client logs from the server but we have to got in depth, looking for specific messages.
+Now we selected all DNS Client logs from the server but we have to go in depth, looking only for specific suspicious messages.
 You have to work in order to parse the following specific log message structure (see the exeample here):
 
 ```
 DNS query is called for the name some_uppercase_letters_and_numbers-.sometext.sometext, type 1, query options 196616, Server List 172.16.122.4, isNetwork query 0, network index 0, interface index 0, is asynchronous query 0
 ```
 
-Everytime that the exfiltration script starts to exfiltrate data, DNS queries are crafted in order to generate a query record for a fake A record. Windows will log these queries in the EventViewer like in the example above.
+Everytime that the exfiltration script starts to exfiltrate data, DNS queries are crafted and a query A record to the fake DNS Server (172.16.122.4 in the example above) is generated. Windows will log these queries in the EventViewer like in the example above.
 You also need to extract fields from this specific log message:
 
 -> name requested as "dns_query"
@@ -45,7 +46,7 @@ You also need to extract fields from this specific log message:
 
 *Hint:*
 ```
-Open the "extract fields" on content fields and use DPL architect to parse the log message creating the variables with fieldsAdd command.
+Open the "extract fields" on content fields and use DPL architect to parse the log message, creating the variables with fieldsAdd command.
 ```
 
 ## Task 3: adjust the findings
@@ -58,7 +59,7 @@ DNS lab server. Now please let's format the table in order to display only:
 
 -> the "host" queried (we know that it is an hash chunk used to exfiltrate data)
 
--> the DNS server used (that is the fake DNS)
+-> the DNS server used (that is the fake DNS) by each exfiltration
 
 *Hint:*
 ```
