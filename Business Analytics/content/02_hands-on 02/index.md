@@ -19,6 +19,8 @@
     ```
 1. Copy the token and paste it on line 2
 1. Copy the URL of your Dynatrace tenant and paste it on line 3
+1. Make the following modifications: remove the ".apps" and the leading "/"
+1. It has to look something like "https://<your id>.sprint.dynatracelabs.com"
 1. Type "CTRL + X", then "Y", then hit <Enter>.
 1. Run the following command
     ```
@@ -37,6 +39,10 @@
 ### 3) CloudEvent Batch event
 1. Run the command `cat cloudevent-batch-payload.json`
 1. Run the command `./cloudevent-batch.sh`
+
+For all the event types, run the followingquery:
+```
+```
 
 ### 5) RUM API event
 1. Navigate to your easyTrade application
