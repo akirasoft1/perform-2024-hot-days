@@ -3,7 +3,7 @@ Up to now we have mostly used Dynatrace Query Language (DQL) to filter the resul
 
 #### Notebook Template
 You can find the instructions and the template for the lab in this notebook: 
-https://vis62283.sprint.apps.dynatracelabs.com/ui/document/v0/#share=3c24dca9-76cb-494d-8583-0ec389709906
+[https://vis62283.sprint.apps.dynatracelabs.com/ui/document/v0/#share=3c24dca9-76cb-494d-8583-0ec389709906](https://vis62283.sprint.apps.dynatracelabs.com/ui/document/v0/#share=3c24dca9-76cb-494d-8583-0ec389709906)
 > - The notebook is read-only, duplicate it to create your own copy which you can use to work on the exercises. 
 
 
