@@ -10,13 +10,13 @@ You can find the details about the environment in Dynatrace University on the En
 
 We will us an application called unguard for this lab, it is an insecure cloud native microservices demo application. The application is a simple twitter clone, which allows to post messages, images and URLs. 
 
-You can access it using the following URL: http://unguard.dtulab716435646.dynatrace.training/ui/
+You can access it using the following URL: [http://unguard.dtulab716435646.dynatrace.training/ui/](http://unguard.dtulab716435646.dynatrace.training/ui/)
 
 ![unguard](../../assets/images/0-3-unguard.png)
 
 #### Notebook Template
 You can find the instructions and the template for the lab in this notebook: 
-https://vis62283.sprint.apps.dynatracelabs.com/ui/document/v0/#share=c69b880e-fdfd-4f29-bbf8-0ca19ed6f8db
+[https://vis62283.sprint.apps.dynatracelabs.com/ui/document/v0/#share=c69b880e-fdfd-4f29-bbf8-0ca19ed6f8db](https://vis62283.sprint.apps.dynatracelabs.com/ui/document/v0/#share=c69b880e-fdfd-4f29-bbf8-0ca19ed6f8db)
 > - The notebook is read-only, duplicate it to create your own copy which you can use to work on the exercises. 
 
 #### Task 1: Create a new user
