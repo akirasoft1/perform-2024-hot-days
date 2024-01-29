@@ -52,32 +52,3 @@ Now that we filtered the logs for entries about real users that registered, we c
 > - Count the number of users that registered
 >   - Hint: take a look at the [summarize command](https://docs.dynatrace.com/docs/shortlink/dql-commands-overview#aggregation-commands)
 >   - Hint: you can change the way the result is displayed with the options menu
-
-### Optional: Query spans
-Since Grail stores more than just logs, we can use DQL to query other observability data like traces, events, metrics, etc.
-
-Instead of using logs, we can find the details about the registered users in traces. Logs are dependent of the application, sometimes applications don't have the required information in their logs, but traces will always capture the information about the requests that were made. 
-
-Let's see how we can find the information we queried above using traces. Traces consist of individual spans and we can use DQL query to use these spans with `fetch spans`
-
-#### 8. Find registration requests
-As you can see, that data is much more structured in spans than it is in logs. We have dedicated fields for the url, HTTP method, HTTP headers, etc.
-> - Filter the spans using the url (*url.path*) and HTTP method (*http.request.method*) to find all POST request that were made to the register endpoint. 
-
-#### 9. Filter out robots by user-agent
-In the previous exercise, we were using the username to filter out the robots, that worked because they were always prefixed with ROBOT_. Instead of using the username, which relies on a pattern, we can use the user-agent, identifying the browser that was used to determine if it was a robot. 
-> - We know that the robots have either *axios* or *simulated-browser-user* in their user-agent. Use those values to filter out requests by HTTP headers (*http.request.headers*)
-
-#### 10. Query full trace\nIn the queries above, we were always looking at individual spans, but we can also take a look at full traces.
-> - Hint: the trace.id is a Uid and needs to be converted first using [toUid](https://docs.dynatrace.com/docs/platform/grail/dynatrace-query-language/functions/conversion-and-casting-functions#toUid):  `trace.id == toUid(\"6c06857d74bbff7161fb8ae19aa5b6a5\")`
->   - Hint: to have the results in order, [sort](https://docs.dynatrace.com/docs/platform/grail/dynatrace-query-language/commands/ordering-commands#sort) the results descending by *start_time*"
-
-For our investigations we can leverage the full Dynatrace Platform, meaning that we don't necessarily need to use DQL for everything, we can for example use the [Distributed Traces](https://sel18797.sprint.apps.dynatracelabs.com/ui/apps/dynatrace.classic.distributed.traces/ui/diagnostictools/purepaths?gtf=-2h&gf=all), [Service details](https://sel18797.sprint.apps.dynatracelabs.com/ui/apps/dynatrace.classic.services/#serviceOverview;id=SERVICE-3173BE5994AD5D2B;gf=all;gtf=-2h) or [Service Flow](https://sel18797.sprint.apps.dynatracelabs.com/ui/apps/dynatrace.classic.services/#serviceflow;sci=SERVICE-3173BE5994AD5D2B;timeframe=custom1706253814056to1706261014056;gtf=-2h;gf=all)
-
-#### Lab 0 Recap
-In this session we saw:
-- How to fetch logs and filter by certain criteria using contains
-- Restrict the fields to be displayed and sort the data
-- Summarize the results to count the entries
-- Use spans to see additional details
-- Leverage the full Dynatrace Platform for investigation\n
