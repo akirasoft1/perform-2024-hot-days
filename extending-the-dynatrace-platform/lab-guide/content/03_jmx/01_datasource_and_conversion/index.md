@@ -10,7 +10,7 @@ Start by opening a new empty folder in VS code for the 2.0 Extension.
 
 Then use the 'Initialize workspace' command and select schema version `1.282.0` and to use existing certs. Using existing certs means we are re-using the certificates from the earlier labs and do not need to upload them to Dynatrace or distribute them to our hosts and ActiveGates.
 
-When asked what type of project you are creating select "JMX 1.0 Conversion." It will ask if you have this extenion file locally or would like to retrieve it from your connected Dynatrace environment. The 1.0 extension you will use can be found [in the supporting materials under jmx\\1.0](../../../../supporting-materials/jmx/1.0/plugin.json). Use the local option and select the plugin.json file.
+When asked what type of project you are creating select "JMX 1.0 Conversion." It will ask if you have this extenion file locally or would like to retrieve it from your connected Dynatrace environment. The 1.0 extension you will use can be found in the supporting materials under `jmx\1.0`. Use the local option and select the plugin.json file.
 
 ![Conversion](../../../assets/images/03_jmx_initialize_conversion_step.png)
 
