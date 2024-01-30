@@ -67,6 +67,10 @@ from dynatrace_extension import Extension, Status, StatusValue, DtEventType
 METRIC_PREFIX = "custom.perform_host_performance"
 ```
 
+#### Remove the boilerplate code
+
+To prepare the extension for our own code, we need to remove the boilerplate code first. Remove everything inside the `for endpoint...` loop code block.
+
 #### Add class variables and log activation_config
 
 In v1, class variables are defined in the main body of the class. Version 2, introduces a special `initialize` method when the extension loads for the first time. 

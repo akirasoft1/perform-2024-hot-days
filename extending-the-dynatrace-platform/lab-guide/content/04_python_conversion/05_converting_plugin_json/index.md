@@ -44,6 +44,8 @@ setup(name="my_new_perform_extensions",
 
 ```
 
+In the VS Code terminal, run the command, `pip install psutil` to make the library available in your environment.
+
 #### ActivationSchema.json
 
 Next up in the `plugin.json` file is the **ConfigUI** section. This information is moved to `ActivationSchema.json`.
