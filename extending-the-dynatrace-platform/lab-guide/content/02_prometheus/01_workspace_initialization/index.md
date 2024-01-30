@@ -3,7 +3,7 @@
 Open up a new folder within VS Code (e.g. `prometheus-windows_extension`).
 
 Use the command pallete (F1 or ctrl+shift+p) and run the `Dynatrace extensions: initialize workspace` command.
-* Select schema `1.282.0`
+* Select schema `1.280.0`
 * Use existing certificates
 * Select the default project type `Extension 2.0`
 
@@ -16,7 +16,7 @@ Update the metadata at the top to give your extension a meaningful name and set 
 ```yaml
 name: custom:windows-prometheus
 version: "0.0.1"
-minDynatraceVersion: "1.282.0"
+minDynatraceVersion: "1.280.0"
 author:
   name: Alice Smith
 ```

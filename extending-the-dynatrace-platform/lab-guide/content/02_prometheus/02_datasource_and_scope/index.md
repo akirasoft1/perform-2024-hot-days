@@ -83,7 +83,7 @@ After this step your extension should look like this:
 ```yaml
 name: custom:windows-prometheus
 version: "0.0.1"
-minDynatraceVersion: "1.282.0"
+minDynatraceVersion: "1.280.0"
 author:
   name: Alice Smith
 
