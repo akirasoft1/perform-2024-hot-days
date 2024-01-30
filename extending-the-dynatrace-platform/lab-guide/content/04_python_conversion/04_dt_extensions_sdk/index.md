@@ -28,7 +28,7 @@ You can now open this folder in the code editor of your choice and continue work
 1. Choose the Dynatrace Extension in the sidebar
 2. Click "Initialize" or "+". 
 3. Choose (or create) a folder.
-4. Choose a version of the schema (1.270).
+4. Choose a version of the schema (1.280).
 5. If necessary, agree to download the schemas and generate keys, otherwise use existing certs and schemas.
 6. Choose "Python Extensions 2.0".
 7. Name your extension.
